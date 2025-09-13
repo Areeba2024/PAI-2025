@@ -1,10 +1,13 @@
-def dictionary(list1,list2):
+def dictionary(list1, list2):
     if len(list1) != len(list2):
         print("List sizes don't match!")
     else:
-        result = dict(zip(list1,list2))
-        print(result)
+        result = {}
+        for i in range(len(list1)):
+            result[list1[i]] = list2[i]
+        print("Dictionary created:", result)
 
-ids = ['001','002','003','004']
-names = ['ali','saad','raza','ahmed']
-dictionary(ids, names)
+list1 = input("Enter the first list elements separated by space: ").split()
+list2 = input("Enter the second list elements separated by space: ").split()
+
+dictionary(list1, list2)
